@@ -1,4 +1,4 @@
-package app;
+package panels.preferences;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import app.Window;
 import model.Preferences;
 import observer.IObserver;
 

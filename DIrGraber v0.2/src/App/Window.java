@@ -9,6 +9,8 @@ import javax.swing.JTabbedPane;
 import dialiogs.changePreferences.ChangePreferences;
 import model.Preferences;
 import observer.IObserver;
+import panels.preferences.PreferencesPanel;
+import panels.send.SendPanel;
 
 @SuppressWarnings("serial")
 public class Window extends JFrame{

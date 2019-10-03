@@ -24,9 +24,9 @@ public class SavePreferencesAction extends AbstractAction{
 	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		this.name = parentDialog.getNameFeald();
-		this.port = parentDialog.getPortFeald();
-		this.destination = parentDialog.getDestinationFeald();
+		this.name = parentDialog.getNameField();
+		this.port = parentDialog.getPortField();
+		this.destination = parentDialog.getDestinationField();
 		
 		preferences = valifation();
 		

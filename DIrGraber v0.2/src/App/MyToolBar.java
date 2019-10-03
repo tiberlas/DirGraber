@@ -5,6 +5,8 @@ import javax.swing.JButton;
 import javax.swing.JToolBar;
 import javax.swing.SwingConstants;
 
+import panels.preferences.PreferencesAction;
+
 @SuppressWarnings("serial")
 public class MyToolBar extends JToolBar{
 

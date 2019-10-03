@@ -22,14 +22,7 @@ public class TEST {
 		//load preferences
 
 		Window window = Window.getInstance();
-		
-		if(preferences == null) {
-			ChangePreferences setPreferencesDialog = new ChangePreferences();
-			setPreferencesDialog.showDialog();
-			window.setVisible(true);
-		} else {
-			window.setVisible(true);
-		}
+		window.setVisible(true);
 		
 		
 //		Confirm c = new Confirm("LINUX", "90063564");

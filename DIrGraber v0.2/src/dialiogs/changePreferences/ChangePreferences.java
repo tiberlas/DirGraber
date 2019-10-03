@@ -24,9 +24,9 @@ public class ChangePreferences implements IObserver{
 	public void update() {
 		Preferences newPreferences = Window.getInstance().getPreferences();
 		
-		dialog.setNameFeald(newPreferences.getName());
-		dialog.setPortFeald(String.valueOf(newPreferences.getPort()));
-		dialog.setDestinationFeald(newPreferences.getDownloadDestination());
+		dialog.setNameField(newPreferences.getName());
+		dialog.setPortField(String.valueOf(newPreferences.getPort()));
+		dialog.setDestinationField(newPreferences.getDownloadDestination());
 		
 	}
 

@@ -1,4 +1,4 @@
-package app;
+package panels.preferences;
 
 import java.awt.event.ActionEvent;
 

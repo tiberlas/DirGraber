@@ -14,7 +14,7 @@ import javax.swing.JTextField;
 
 import app.Window;
 import dialiogs.CloseDialogAction;
-import dialiogs.FileChouserAction;
+import dialiogs.FolderChouserAction;
 import dialiogs.StandardDialogAbstract;
 
 @SuppressWarnings("serial")
@@ -69,7 +69,7 @@ public class ChangePreferencesDialog extends StandardDialogAbstract{
 		btnHelp.setText("HELP");
 
 		btnFileChouser = new JButton("...");
-		btnFileChouser.setAction(new FileChouserAction(txtDestination, this));
+		btnFileChouser.setAction(new FolderChouserAction(txtDestination, this));
 		btnFileChouser.setText("...");
 		btnFileChouser.setToolTipText("CHOUSE A DEFAULT FOLDER FOR SAVEING FILES");
 		
@@ -108,35 +108,35 @@ public class ChangePreferencesDialog extends StandardDialogAbstract{
 		add(south, BorderLayout.SOUTH);
 	}
 	
-	public String getIpFeald() {
+	public String getIpField() {
 		return txtIp.getText();
 	}
 
-	public void setIpFeald(String txtIp) {
+	public void setIpField(String txtIp) {
 		this.txtIp.setText(txtIp);
 	}
 
-	public String getNameFeald() {
+	public String getNameField() {
 		return txtName.getText();
 	}
 	
-	public void setNameFeald(String name) {
+	public void setNameField(String name) {
 		txtName.setText(name);
 	}
 
-	public String getPortFeald() {
+	public String getPortField() {
 		return txtPort.getText();
 	}
 	
-	public void setPortFeald(String port) {
+	public void setPortField(String port) {
 		txtPort.setText(port);
 	}
 
-	public String getDestinationFeald() {
+	public String getDestinationField() {
 		return txtDestination.getText();
 	}
 	
-	public void setDestinationFeald(String destination) {
+	public void setDestinationField(String destination) {
 		txtDestination.setText(destination);
 	}
 

@@ -1,4 +1,4 @@
-package app;
+package panels.send;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
@@ -30,18 +30,26 @@ public class SendPanel extends JPanel{
 		JLabel lblPort = new JLabel("PORT: ");
 		
 		txtIp = new JTextField();
-		txtPort = new JTextField();
-		txtFilePath = new JTextField();
-		btnFileChouser = new JButton("...");
-		btnTest = new JButton("TEST");
-		btnSend = new JButton("SEND");
-		
 		txtIp.setToolTipText("IP ADDRES OF THE RECIVER");
+		
+		txtPort = new JTextField();
 		txtPort.setToolTipText("PORT OF THE RECIVER");
+		
+		txtFilePath = new JTextField();
 		txtFilePath.setToolTipText("CHOUSE A FILE TO SEND");
+		
+		btnFileChouser = new JButton("...");
 		btnFileChouser.setToolTipText("CHOUSE A FILE TO SEND");
+		btnFileChouser.addActionListener(new FileChouserAction(txtFilePath, this));
+		
+		btnTest = new JButton("TEST");
+		btnTest.addActionListener(new TestAction(this));
 		btnTest.setToolTipText("TEST THE CONNECTIN");
+		
+		btnSend = new JButton("SEND");
+		btnSend.addActionListener(new SendAction(this));
 		btnSend.setToolTipText("SEND THE FILE");
+		
 
 		JPanel center = new JPanel();
 		center.setLayout(new GridBagLayout());
@@ -61,6 +69,30 @@ public class SendPanel extends JPanel{
 		add(center, BorderLayout.CENTER);
 		add(bottom, BorderLayout.SOUTH);
 		
+	}
+
+	public String getIpField() {
+		return txtIp.getText();
+	}
+
+	public void setIpField(String txtIp) {
+		this.txtIp.setText(txtIp);
+	}
+
+	public String getPortField() {
+		return txtPort.getText();
+	}
+
+	public void setPortField(String txtPort) {
+		this.txtPort.setText(txtPort);
+	}
+
+	public String getFilePathField() {
+		return txtFilePath.getText();
+	}
+
+	public void setFilePathField(String txtFilePath) {
+		this.txtFilePath.setText(txtFilePath);
 	}
 
 }
