@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import app.App;
+import app.Window;
 import dialiogs.CloseDialogAction;
 import dialiogs.FileChouserAction;
 import dialiogs.StandardDialogAbstract;
@@ -80,7 +80,7 @@ public class ChangePreferencesDialog extends StandardDialogAbstract{
 				
 
 		//first time must do config
-		if(App.getPreferences() == null) {
+		if(Window.getInstance().isEmptyPreferences()) {
 			btnCancel.setEnabled(false);
 		}
 		
@@ -119,13 +119,25 @@ public class ChangePreferencesDialog extends StandardDialogAbstract{
 	public String getNameFeald() {
 		return txtName.getText();
 	}
+	
+	public void setNameFeald(String name) {
+		txtName.setText(name);
+	}
 
 	public String getPortFeald() {
 		return txtPort.getText();
 	}
+	
+	public void setPortFeald(String port) {
+		txtPort.setText(port);
+	}
 
 	public String getDestinationFeald() {
 		return txtDestination.getText();
+	}
+	
+	public void setDestinationFeald(String destination) {
+		txtDestination.setText(destination);
 	}
 
 }

@@ -6,7 +6,7 @@ import java.io.File;
 import javax.swing.AbstractAction;
 import javax.swing.JOptionPane;
 
-import app.App;
+import app.Window;
 import model.Preferences;
 
 @SuppressWarnings("serial")
@@ -31,7 +31,9 @@ public class SavePreferencesAction extends AbstractAction{
 		preferences = valifation();
 		
 		if(preferences != null) {
-			App.setPrefetences(preferences);
+			Window.getInstance().setPreferences(preferences);
+			Window.getInstance().update();
+			
 			parentDialog.dispose();
 		}
 	}
@@ -61,7 +63,7 @@ public class SavePreferencesAction extends AbstractAction{
 				throw new Exception("THE SELECTED DESTINATION IS NOT VALID!\nPLEASE SELECT A VALID DESTINATION");
 			}
 			
-			return new Preferences(name, portNumber, destination);
+			return new Preferences(name, portNumber, null, destination, false);
 			
 		} catch(NumberFormatException e) {
 			

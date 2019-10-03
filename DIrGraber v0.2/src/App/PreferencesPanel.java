@@ -12,8 +12,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import model.Preferences;
+import observer.IObserver;
+
 @SuppressWarnings("serial")
-public class PreferencesPanel extends JPanel{
+public class PreferencesPanel extends JPanel implements IObserver {
 	
 	private JTextField txtName;
 	private JTextField txtIp;
@@ -61,6 +64,14 @@ public class PreferencesPanel extends JPanel{
 		
 		add(center, BorderLayout.CENTER);
 		add(bottom, BorderLayout.SOUTH);
+	}
+
+	@Override
+	public void update() {
+		Preferences newPreferences = Window.getInstance().getPreferences();
+		txtName.setText(newPreferences.getName());
+		txtPort.setText(String.valueOf(newPreferences.getPort()));
+		
 	}
 
 }

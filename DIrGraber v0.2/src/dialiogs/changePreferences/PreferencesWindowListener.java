@@ -6,7 +6,6 @@ import java.awt.event.WindowListener;
 import javax.swing.JDialog;
 import javax.swing.WindowConstants;
 
-import app.App;
 import app.Window;
 
 public class PreferencesWindowListener implements WindowListener{
@@ -32,7 +31,7 @@ public class PreferencesWindowListener implements WindowListener{
 	public void windowClosing(WindowEvent e) {
 		JDialog frame = (JDialog) e.getComponent();
 		
-		if(App.getPreferences() != null)
+		if(Window.getInstance().isEmptyPreferences() == false)
 			frame.dispose();
 		else
 			frame.setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);

@@ -5,17 +5,21 @@ public class Preferences {
 	private String name;
 	private int port;
 	private String ip;
+	private String downloadDestination;
+	private boolean isServerRunning;
 	
 	
 	public Preferences() {
 		super();
 	}
 	
-	public Preferences(String name, int port, String ip) {
+	public Preferences(String name, int port, String ip, String destination, boolean serverRunning) {
 		super();
 		this.name = name;
 		this.port = port;
 		this.ip = ip;
+		this.downloadDestination = destination;
+		this.isServerRunning = serverRunning;
 	}
 
 	public String getName() {
@@ -36,5 +40,21 @@ public class Preferences {
 	public void setIp(String ip) {
 		this.ip = ip;
 	}
+
+	public String getDownloadDestination() {
+		return downloadDestination;
+	}
+	public void setDownloadDestination(String downloadDestination) {
+		this.downloadDestination = downloadDestination;
+	}
+
+	public boolean isServerRunning() {
+		return isServerRunning;
+	}
+
+	public void setServerRunning(boolean isServerRunning) {
+		this.isServerRunning = isServerRunning;
+	}
+	
 	
 }
