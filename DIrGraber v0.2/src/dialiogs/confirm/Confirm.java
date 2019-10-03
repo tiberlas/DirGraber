@@ -37,9 +37,9 @@ public class Confirm extends StandardDialogAbstract{
 		btnSave.setToolTipText("SAVE THE FILE");
 		btnCancel.setToolTipText("DON'T SAVE THE FILE");
 		
-		add(lblTitle, new GridBagConstraints(0, 0, 3, 1, 0, 0, GridBagConstraints.EAST, GridBagConstraints.CENTER, new Insets(10, 20, 0, 0), 200, 10));
-		add(lblSize, new GridBagConstraints(0, 1, 3, 1, 0, 0, GridBagConstraints.EAST, GridBagConstraints.CENTER, new Insets(10, 20, 0, 0), 200, 10));
-		add(lblDestination, new GridBagConstraints(0, 2, 1, 1, 0, 0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(10, 20, 0, 0), 30, 10));
+		add(lblTitle, new GridBagConstraints(1, 0, 3, 1, 0, 0, GridBagConstraints.EAST, GridBagConstraints.NORTH, new Insets(10, 20, 0, 0), 200, 10));
+		add(lblSize, new GridBagConstraints(1, 1, 3, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NORTH, new Insets(10, 20, 0, 0), 200, 10));
+		add(lblDestination, new GridBagConstraints(0, 2, 1, 1, 0, 0, GridBagConstraints.CENTER, GridBagConstraints.CENTER, new Insets(10, 20, 0, 0), 10, 10));
 		add(txtSaveTo, new GridBagConstraints(1, 2, 1, 1, 100, 0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(0, 20, 0, 0), 200, 10));
 		add(btnFileChouser, new GridBagConstraints(2, 2, 1, 1, 0, 0, GridBagConstraints.WEST, GridBagConstraints.NONE, new Insets(0, 20, 0, 0), 30, 10));
 		add(btnSave, new GridBagConstraints(1, 3, 1, 1, 0, 0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(40, 10, 0, 0), 30, 10));

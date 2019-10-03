@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import app.Window;
+import application.Window;
 import dialiogs.CloseDialogAction;
 import dialiogs.FolderChouserAction;
 import dialiogs.StandardDialogAbstract;

@@ -1,6 +1,6 @@
 package dialiogs.changePreferences;
 
-import app.Window;
+import application.Window;
 import model.Preferences;
 import observer.IObserver;
 

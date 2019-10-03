@@ -1,16 +1,13 @@
-package app.testing;
+package application.testing;
 
-import app.Window;
-import dialiogs.changePreferences.ChangePreferences;
 import dialiogs.confirm.Confirm;
-import dialiogs.error.Error;
 import dialiogs.packing.Packing;
 import dialiogs.success.Success;
 import dialiogs.test.TestFaild;
 import dialiogs.test.TestPassed;
 import dialiogs.transfering.Transfering;
 import dialiogs.unpacking.Unpacking;
-import dialiogs.worning.Waiting;
+import dialiogs.waithing.Waiting;
 import model.Preferences;
 
 public class TEST {
@@ -21,13 +18,13 @@ public class TEST {
 		
 		//load preferences
 
-		Window window = Window.getInstance();
-		window.setVisible(true);
+//		Window window = Window.getInstance();
+//		window.setVisible(true);
 		
 		
-//		Confirm c = new Confirm("LINUX", "90063564");
-//		c.setVisible(true);
-//		
+		Confirm c = new Confirm("LINUX", "90063564");
+		c.setVisible(true);
+		
 //		Packing p = new Packing();
 //		p.setVisible(true);
 //		
@@ -36,12 +33,12 @@ public class TEST {
 //		
 //		Waiting w = new Waiting();
 //		w.setVisible(true);
-//		
-//		Transfer t = new Transfer();
+//	
+//		Transfering t = new Transfering();
 //		t.setVisible(true);
 //		
-//		Error e = new Error("UNKNOW ERROR!");
-//		e.setVisible(true);
+//		dialiogs.error.Error error = new dialiogs.error.Error("UNKNOW ERROR!");
+//		error.setVisible(true);
 //		
 //		Success s = new Success();
 //		s.setVisible(true);

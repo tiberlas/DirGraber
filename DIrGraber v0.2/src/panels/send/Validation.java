@@ -4,7 +4,7 @@ import java.io.File;
 
 import javax.swing.JOptionPane;
 
-import app.Window;
+import application.Window;
 import model.SendingFile;
 
 public class Validation {

@@ -6,7 +6,7 @@ import java.awt.event.WindowListener;
 import javax.swing.JDialog;
 import javax.swing.WindowConstants;
 
-import app.Window;
+import application.Window;
 
 public class PreferencesWindowListener implements WindowListener{
 

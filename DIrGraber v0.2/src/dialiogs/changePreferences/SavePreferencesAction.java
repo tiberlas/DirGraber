@@ -6,7 +6,7 @@ import java.io.File;
 import javax.swing.AbstractAction;
 import javax.swing.JOptionPane;
 
-import app.Window;
+import application.Window;
 import model.Preferences;
 
 @SuppressWarnings("serial")
