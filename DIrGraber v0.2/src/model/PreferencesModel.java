@@ -1,6 +1,6 @@
 package model;
 
-public class Preferences {
+public class PreferencesModel {
 
 	private String name;
 	private int port;
@@ -9,11 +9,11 @@ public class Preferences {
 	private boolean isServerRunning;
 	
 	
-	public Preferences() {
+	public PreferencesModel() {
 		super();
 	}
 	
-	public Preferences(String name, int port, String ip, String destination, boolean serverRunning) {
+	public PreferencesModel(String name, int port, String ip, String destination, boolean serverRunning) {
 		super();
 		this.name = name;
 		this.port = port;

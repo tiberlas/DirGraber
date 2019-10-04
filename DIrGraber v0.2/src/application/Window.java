@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JTabbedPane;
 
 import dialiogs.changePreferences.ChangePreferences;
-import model.Preferences;
+import model.PreferencesModel;
 import observer.IObserver;
 import panels.preferences.PreferencesPanel;
 import panels.send.SendPanel;
@@ -60,11 +60,11 @@ public class Window extends JFrame{
 		return preferences.isEmpty();
 	}
 	
-	public Preferences getPreferences() {
+	public PreferencesModel getPreferences() {
 		return preferences.getPreferences();
 	}
 	
-	public void setPreferences(Preferences newPreferences) {
+	public void setPreferences(PreferencesModel newPreferences) {
 		preferences.setPreferences(newPreferences);
 	}
 	

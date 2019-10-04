@@ -1,6 +1,6 @@
 package model;
 
-public class SendingFile {
+public class SendingFileModel {
 
 	private String ip;
 	private int port;
@@ -8,12 +8,12 @@ public class SendingFile {
 	
 	
 	
-	public SendingFile() {
+	public SendingFileModel() {
 		super();
 		
 	}
 
-	public SendingFile(String ip, int port, String filePath) {
+	public SendingFileModel(String ip, int port, String filePath) {
 		super();
 		this.ip = ip;
 		this.port = port;

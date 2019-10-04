@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import application.Window;
-import model.Preferences;
+import model.PreferencesModel;
 import observer.IObserver;
 
 @SuppressWarnings("serial")
@@ -69,7 +69,7 @@ public class PreferencesPanel extends JPanel implements IObserver {
 
 	@Override
 	public void update() {
-		Preferences newPreferences = Window.getInstance().getPreferences();
+		PreferencesModel newPreferences = Window.getInstance().getPreferences();
 		txtName.setText(newPreferences.getName());
 		txtPort.setText(String.valueOf(newPreferences.getPort()));
 		

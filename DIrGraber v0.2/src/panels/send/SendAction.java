@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import model.SendingFile;
+import model.SendingFileModel;
 
 @SuppressWarnings("serial")
 public class SendAction extends AbstractAction{
@@ -19,8 +19,12 @@ public class SendAction extends AbstractAction{
 	public void actionPerformed(ActionEvent arg0) {
 		Validation validate = new Validation();
 		
-		SendingFile forSending = validate.validate(panel.getIpField(), panel.getPortField(), panel.getFilePathField());
+		SendingFileModel forSending = validate.validate(panel.getIpField(), panel.getPortField(), panel.getFilePathField());
 		
+		if(forSending != null) {
+			SendingFileThread sendingFile = new SendingFileThread(forSending);
+			sendingFile.start();
+		}
 	}
 
 }

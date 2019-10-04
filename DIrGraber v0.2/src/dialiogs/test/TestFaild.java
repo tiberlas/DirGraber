@@ -13,10 +13,11 @@ import dialiogs.StandardDialogAbstract;
 
 @SuppressWarnings("serial")
 public class TestFaild extends StandardDialogAbstract {
+	
 	private JButton btnClose;
 	private JButton btnTryAgain;
 	
-	public TestFaild() {
+	public TestFaild(TestSendingThread forRetry) {
 		super("test faild");
 		
 		JLabel lblTitle = new JLabel("<html>TEST HAS FAILD!<br/>CHECK THE <u>IP</u> AND <u>PORT</u> OF THE RECIVER.</html>");
@@ -27,6 +28,7 @@ public class TestFaild extends StandardDialogAbstract {
 		btnClose.setToolTipText("CLOSE THIS WINDOW");
 		
 		btnTryAgain = new JButton("TRY AGAIN");
+		btnTryAgain.addActionListener(new TestRetryAction(forRetry, this));
 		btnTryAgain.setToolTipText("TRY THE TEST AGAIN");
 		
 		

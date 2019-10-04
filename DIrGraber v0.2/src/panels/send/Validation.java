@@ -5,11 +5,11 @@ import java.io.File;
 import javax.swing.JOptionPane;
 
 import application.Window;
-import model.SendingFile;
+import model.SendingFileModel;
 
 public class Validation {
 
-	public SendingFile validate(String ip, String port, String filePath) {
+	public SendingFileModel validate(String ip, String port, String filePath) {
 		try {
 			int portNumber = Integer.parseInt(port);
 			
@@ -26,7 +26,7 @@ public class Validation {
 				throw new Exception("THE SELECTED DESTINATION IS NOT VALID!\nPLEASE SELECT A VALID DESTINATION");
 			}
 			
-			return new SendingFile(ip, portNumber, filePath);
+			return new SendingFileModel(ip, portNumber, filePath);
 			
 		} catch(NumberFormatException e) {
 			JOptionPane.showMessageDialog(Window.getInstance(), "PLEASE ENTER A PORT NUMBER");

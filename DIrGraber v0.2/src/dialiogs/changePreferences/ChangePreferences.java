@@ -1,7 +1,7 @@
 package dialiogs.changePreferences;
 
 import application.Window;
-import model.Preferences;
+import model.PreferencesModel;
 import observer.IObserver;
 
 public class ChangePreferences implements IObserver{
@@ -22,7 +22,7 @@ public class ChangePreferences implements IObserver{
 
 	@Override
 	public void update() {
-		Preferences newPreferences = Window.getInstance().getPreferences();
+		PreferencesModel newPreferences = Window.getInstance().getPreferences();
 		
 		dialog.setNameField(newPreferences.getName());
 		dialog.setPortField(String.valueOf(newPreferences.getPort()));

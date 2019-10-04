@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 
 import dialiogs.CloseDialogAction;
 import dialiogs.StandardDialogAbstract;
+import model.SendingFileModel;
 
 @SuppressWarnings("serial")
 public class TestPassed extends StandardDialogAbstract{
@@ -17,7 +18,7 @@ public class TestPassed extends StandardDialogAbstract{
 	private JButton btnClose;
 	private JButton btnTransfer;
 	
-	public TestPassed() {
+	public TestPassed(SendingFileModel forSending) {
 		super("test passed");
 		
 		JLabel lblTitle = new JLabel("<html>TEST HAS PASSED!<br/>CLICK <u>CLOSE</u> TO CLOSE THE WINDOW OR <u>TRANSFERE</u> TO SEND THE FILE.</html>");
@@ -28,6 +29,7 @@ public class TestPassed extends StandardDialogAbstract{
 		btnClose.setToolTipText("CLOSE THIS WINDOW");
 		
 		btnTransfer = new JButton("TRANSFERE");
+		btnTransfer.addActionListener(new TestTransferAction(forSending, this));
 		btnTransfer.setToolTipText("BEGIN SENDING THE FILE");
 		
 		JPanel btn = new JPanel();

@@ -2,13 +2,13 @@ package application;
 
 import java.util.ArrayList;
 
-import model.Preferences;
+import model.PreferencesModel;
 import observer.IObservable;
 import observer.IObserver;
 
 public class UserPreferences implements IObservable {
 
-	private Preferences preferences;
+	private PreferencesModel preferences;
 	private ArrayList<IObserver> observerList;
 	
 	public UserPreferences() {
@@ -23,11 +23,11 @@ public class UserPreferences implements IObservable {
 		return preferences == null;
 	}
 	
-	public void setPreferences(Preferences newPreferences) {
+	public void setPreferences(PreferencesModel newPreferences) {
 		preferences = newPreferences;
 	}
 	
-	public Preferences getPreferences() {
+	public PreferencesModel getPreferences() {
 		return preferences;
 	}
 	

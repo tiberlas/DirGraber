@@ -8,11 +8,11 @@ import dialiogs.test.TestPassed;
 import dialiogs.transfering.Transfering;
 import dialiogs.unpacking.Unpacking;
 import dialiogs.waithing.Waiting;
-import model.Preferences;
+import model.PreferencesModel;
 
 public class TEST {
 
-	private static Preferences preferences = null;
+	private static PreferencesModel preferences = null;
 	
 	public static void main(String[] args) {
 		
@@ -25,24 +25,24 @@ public class TEST {
 		Confirm c = new Confirm("LINUX", "90063564");
 		c.setVisible(true);
 		
-//		Packing p = new Packing();
-//		p.setVisible(true);
-//		
-//		Unpacking u = new Unpacking();
-//		u.setVisible(true);
-//		
-//		Waiting w = new Waiting();
-//		w.setVisible(true);
-//	
-//		Transfering t = new Transfering();
-//		t.setVisible(true);
-//		
-//		dialiogs.error.Error error = new dialiogs.error.Error("UNKNOW ERROR!");
-//		error.setVisible(true);
-//		
-//		Success s = new Success();
-//		s.setVisible(true);
-//		
+		Packing p = new Packing();
+		p.setVisible(true);
+		
+		Unpacking u = new Unpacking();
+		u.setVisible(true);
+		
+		Waiting w = new Waiting();
+		w.setVisible(true);
+	
+		Transfering t = new Transfering();
+		t.setVisible(true);
+		
+		dialiogs.error.Error error = new dialiogs.error.Error("UNKNOW ERROR!");
+		error.setVisible(true);
+		
+		Success s = new Success();
+		s.setVisible(true);
+		
 //		TestPassed tp = new TestPassed();
 //		tp.setVisible(true);
 //		
@@ -50,11 +50,11 @@ public class TEST {
 //		tf.setVisible(true);
 	}
 	
-	public static void setPrefetences(Preferences p) {
+	public static void setPrefetences(PreferencesModel p) {
 		preferences = p;
 	}
 	
-	public static Preferences getPreferences() {
+	public static PreferencesModel getPreferences() {
 		return preferences;
 	}
 

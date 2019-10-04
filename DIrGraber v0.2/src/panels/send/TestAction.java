@@ -4,7 +4,8 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import model.SendingFile;
+import dialiogs.test.TestSendingThread;
+import model.SendingFileModel;
 
 @SuppressWarnings("serial")
 public class TestAction extends AbstractAction{
@@ -19,8 +20,14 @@ public class TestAction extends AbstractAction{
 	public void actionPerformed(ActionEvent arg0) {
 		Validation validate = new Validation();
 		
-		SendingFile forSending = validate.validate(panel.getIpField(), panel.getPortField(), panel.getFilePathField());
+		SendingFileModel forSending = validate.validate(panel.getIpField(), panel.getPortField(), panel.getFilePathField());
 		
+		if(forSending != null) {
+			panel
+			
+			TestSendingThread testingConnection = new TestSendingThread(forSending);
+			testingConnection.start();
+		}
 	}
 
 }
