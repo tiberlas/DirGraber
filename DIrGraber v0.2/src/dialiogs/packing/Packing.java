@@ -37,4 +37,8 @@ public class Packing extends StandardDialogAbstract{
 		add(progres, new GridBagConstraints(0, 1, 2, 1, 100, 0, GridBagConstraints.CENTER, GridBagConstraints.HORIZONTAL, new Insets(20, 20, 0, 20), 450, 12));
 		add(btnCancel, new GridBagConstraints(1, 3, 1, 1, 0, 0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(20, 20, 0, 20), 30, 10));
 	}
+
+	public void setProgres(int progres) {
+		this.progres.setValue(progres);
+	}
 }

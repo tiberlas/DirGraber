@@ -1,13 +1,6 @@
 package application.testing;
 
-import dialiogs.confirm.Confirm;
-import dialiogs.packing.Packing;
-import dialiogs.success.Success;
-import dialiogs.test.TestFaild;
-import dialiogs.test.TestPassed;
-import dialiogs.transfering.Transfering;
-import dialiogs.unpacking.Unpacking;
-import dialiogs.waithing.Waiting;
+import application.Window;
 import model.PreferencesModel;
 
 public class TEST {
@@ -17,31 +10,31 @@ public class TEST {
 	public static void main(String[] args) {
 		
 		//load preferences
-
-//		Window window = Window.getInstance();
-//		window.setVisible(true);
+		Window.getInstance().setPreferences(new PreferencesModel("tibi", 9000, "127.0.0.1", "C:", false));
+		Window window = Window.getInstance();
+		window.setVisible(true);
 		
 		
-		Confirm c = new Confirm("LINUX", "90063564");
-		c.setVisible(true);
-		
-		Packing p = new Packing();
-		p.setVisible(true);
-		
-		Unpacking u = new Unpacking();
-		u.setVisible(true);
-		
-		Waiting w = new Waiting();
-		w.setVisible(true);
-	
-		Transfering t = new Transfering();
-		t.setVisible(true);
-		
-		dialiogs.error.Error error = new dialiogs.error.Error("UNKNOW ERROR!");
-		error.setVisible(true);
-		
-		Success s = new Success();
-		s.setVisible(true);
+//		Confirm c = new Confirm("LINUX", "90063564");
+//		c.setVisible(true);
+//		
+//		Packing p = new Packing();
+//		p.setVisible(true);
+//		
+//		Unpacking u = new Unpacking();
+//		u.setVisible(true);
+//		
+//		Waiting w = new Waiting();
+//		w.setVisible(true);
+//	
+//		Transfering t = new Transfering();
+//		t.setVisible(true);
+//		
+//		dialiogs.error.Error error = new dialiogs.error.Error("UNKNOW ERROR!");
+//		error.setVisible(true);
+//		
+//		Success s = new Success();
+//		s.setVisible(true);
 		
 //		TestPassed tp = new TestPassed();
 //		tp.setVisible(true);

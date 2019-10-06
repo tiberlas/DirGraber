@@ -19,7 +19,7 @@ public class SendAction extends AbstractAction{
 	public void actionPerformed(ActionEvent arg0) {
 		Validation validate = new Validation();
 		
-		SendingFileModel forSending = validate.validate(panel.getIpField(), panel.getPortField(), panel.getFilePathField());
+		SendingFileModel forSending = validate.validate(panel.getIpField(), panel.getPortField(), panel.getFilePathField(), panel.getSpeed());
 		
 		if(forSending != null) {
 			SendingFileThread sendingFile = new SendingFileThread(forSending);

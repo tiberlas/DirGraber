@@ -10,15 +10,20 @@ import javax.swing.JPanel;
 
 import dialiogs.CloseDialogAction;
 import dialiogs.StandardDialogAbstract;
+import model.SendingFileModel;
+import panels.send.SendPanel;
 
 @SuppressWarnings("serial")
 public class TestFaild extends StandardDialogAbstract {
 	
 	private JButton btnClose;
 	private JButton btnTryAgain;
+	private SendPanel panel;
 	
-	public TestFaild(TestSendingThread forRetry) {
+	public TestFaild(SendingFileModel forRetry, SendPanel panel) {
 		super("test faild");
+		
+		this.panel = panel;
 		
 		JLabel lblTitle = new JLabel("<html>TEST HAS FAILD!<br/>CHECK THE <u>IP</u> AND <u>PORT</u> OF THE RECIVER.</html>");
 
@@ -39,6 +44,10 @@ public class TestFaild extends StandardDialogAbstract {
 		
 		add(lblTitle, new GridBagConstraints(1, 0, 1, 1, 100, 0, GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(20, 20, 0, 20), 200, 10));
 		add(btn, new GridBagConstraints(1, 3, 1, 1, 0, 0, GridBagConstraints.EAST, GridBagConstraints.NONE, new Insets(20, 20, 0, 20), 30, 10));
+	}
+	
+	public SendPanel getPanel() {
+		return panel;
 	}
 
 }

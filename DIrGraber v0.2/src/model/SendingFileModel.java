@@ -4,8 +4,8 @@ public class SendingFileModel {
 
 	private String ip;
 	private int port;
-	private String FilePath;
-	
+	private String filePath;
+	private SpeedTransfer speed;
 	
 	
 	public SendingFileModel() {
@@ -13,11 +13,12 @@ public class SendingFileModel {
 		
 	}
 
-	public SendingFileModel(String ip, int port, String filePath) {
+	public SendingFileModel(String ip, int port, String filePath, SpeedTransfer speed) {
 		super();
 		this.ip = ip;
 		this.port = port;
-		FilePath = filePath;
+		this.filePath = filePath;
+		this.speed = speed;
 	}
 
 	public String getIp() {
@@ -37,13 +38,19 @@ public class SendingFileModel {
 	}
 
 	public String getFilePath() {
-		return FilePath;
+		return filePath;
 	}
 
 	public void setFilePath(String filePath) {
-		FilePath = filePath;
+		this.filePath = filePath;
 	}
-	
-	
+
+	public SpeedTransfer getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(SpeedTransfer speed) {
+		this.speed = speed;
+	}
 	
 }

@@ -4,13 +4,16 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
+import model.SendingFileModel;
+
 @SuppressWarnings("serial")
 public class TestRetryAction extends AbstractAction{
 
-	private TestSendingThread forRetry;
+	private SendingFileModel forRetry;
 	private TestFaild failDialog;
+	private TestSendingThread sending;
 	
-	public TestRetryAction(TestSendingThread forRetry, TestFaild failDialog) {
+	public TestRetryAction(SendingFileModel forRetry, TestFaild failDialog) {
 		
 		this.forRetry = forRetry;
 		this.failDialog = failDialog;
@@ -20,7 +23,10 @@ public class TestRetryAction extends AbstractAction{
 	public void actionPerformed(ActionEvent arg0) {
 		
 		failDialog.dispose();
-		forRetry.start();
+		failDialog.getPanel().onTestClick();
+		
+		sending = new TestSendingThread(forRetry, failDialog.getPanel());
+		sending.start();
 	}
 
 }

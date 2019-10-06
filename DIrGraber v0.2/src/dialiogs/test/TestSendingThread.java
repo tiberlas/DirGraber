@@ -5,14 +5,17 @@ import java.io.DataOutputStream;
 import java.net.Socket;
 
 import model.SendingFileModel;
+import panels.send.SendPanel;
 
 public class TestSendingThread extends Thread{
 	
 	private SendingFileModel testConnection;
+	private SendPanel panel;
 	
-	public TestSendingThread(SendingFileModel testConnection) {
+	public TestSendingThread(SendingFileModel testConnection, SendPanel panel) {
 
 		this.testConnection = testConnection;
+		this.panel = panel;
 	}
 	
 	@Override
@@ -31,8 +34,9 @@ public class TestSendingThread extends Thread{
 			if(in.readBoolean() == true) {
 				TestPassed passDialog = new TestPassed(testConnection);
 				passDialog.setVisible(true);
+				panel.TestEnd();
 			} else {
-				failDialog(this);
+				failDialog();
 			}
 			
 			out.close();
@@ -40,14 +44,15 @@ public class TestSendingThread extends Thread{
 			soc.close();
 			
 		} catch(Exception e) {
-			failDialog(this);
+			failDialog();
 		}
 	
 	}
 	
-	private void failDialog(TestSendingThread forRetry) {
-		TestFaild faildDialog = new TestFaild(this);
+	private void failDialog() {
+		TestFaild faildDialog = new TestFaild(testConnection, panel);
 		faildDialog.setVisible(true);
+		panel.TestEnd();
 	}
 
 }

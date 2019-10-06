@@ -20,13 +20,14 @@ public class TestAction extends AbstractAction{
 	public void actionPerformed(ActionEvent arg0) {
 		Validation validate = new Validation();
 		
-		SendingFileModel forSending = validate.validate(panel.getIpField(), panel.getPortField(), panel.getFilePathField());
+		SendingFileModel forSending = validate.validate(panel.getIpField(), panel.getPortField(), panel.getFilePathField(), panel.getSpeed());
 		
 		if(forSending != null) {
-			panel
+			panel.onTestClick();
 			
-			TestSendingThread testingConnection = new TestSendingThread(forSending);
+			TestSendingThread testingConnection = new TestSendingThread(forSending, panel);
 			testingConnection.start();
+			
 		}
 	}
 
